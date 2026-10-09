@@ -3,11 +3,11 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-import BarraNavegacao from "../components/BarraNavegacao";
-import CampoBusca from "../components/CampoBusca";
-import Carregando from "../components/Carregando";
-import QuantumListBridge from "../components/ListaAgentes";
-import TelemetryBeacon from "../components/TelemetryBeacon";
+import BarraNavegacao from "./components/BarraNavegacao";
+import CampoBusca from "./components/CampoBusca";
+import Carregando from "./components/Carregando";
+import QuantumListBridge from "./components/ListaAgentes";
+import TelemetryBeacon from "./components/TelemetryBeacon";
 
 export default function Home() {
 
