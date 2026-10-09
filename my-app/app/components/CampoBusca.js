@@ -7,7 +7,7 @@ export default function CampoBusca({ busca, setBusca }) {
                 type="text"
                 value={busca}
                 onChange={(evento) => setBusca(evento.target.value)}
-                placeholder="Digite o nome"
+                placeholder="Digite o nome exato"
             />
         </div>
     );

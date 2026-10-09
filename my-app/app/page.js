@@ -39,9 +39,13 @@ export default function Home() {
     carregarAgentes();
   }, []);
 
-  const agentesFiltrados = agentes.filter((agente) =>
-    agente.displayName.toLowerCase().includes(busca.toLowerCase())
-  );
+  const nomeBusca = busca.trim().toLowerCase();
+
+  const agentesVisiveis = !nomeBusca
+    ? agentes
+    : agentes.filter((agente) =>
+      agente.displayName.toLowerCase() === nomeBusca
+    );
 
   return (
     <main>
@@ -61,7 +65,7 @@ export default function Home() {
       {erro && <p>{erro}</p>}
 
       {!carregando && !erro && (
-        <QuantumListBridge agentes={agentesFiltrados} />
+        <QuantumListBridge agentes={agentesVisiveis} />
       )}
     </main>
   );
